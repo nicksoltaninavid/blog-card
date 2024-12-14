@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "figtree";
+  src: url("font/Figtree-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "figtreeIT";
+  src: url("font/Figtree-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "figtreeEX";
+  src: url("font/static/Figtree-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "figtreeSE";
+  src: url("font/static/Figtree-SemiBold.ttf");
+}
+body {
+  background-color: hsl(47, 88%, 63%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.blog-card {
+  width: 350px;
+  border: 1px solid black;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap:12px; /**Spacing between internal elements --- فاصله بین عناصر داخلی**/
+}
+
+.blog-card  header  img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.blog-card .tag {
+  background-color: hsl(47, 88%, 63%);
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 20px;
+  font-family: "figtreeEX";
+  font-weight: bold;
+  font-size:15px;
+}
+
+.blog-card .content h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 16px 0;
+    font-family: "figtreeEX";
+}
+.blog-card .content :nth-child(1){
+  color: hsl(0, 0%, 7%);
+  font-size: 15px;
+  font-weight: 600;
+}
+.blog-card .content p {
+    font-family:"figtree" ;
+    color: hsl(0, 0%, 42%);
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 500;
+}
+.blog-card footer{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+.blog-card footer img{
+  width: 32px;
+  height: 32px;
+}
+.blog-card footer p {
+  font-weight:800;
+  font-family: "figtree";
+  font-size: 15px;
+}
+/* responsive for mobile */
+@media( max-width: 375px){
+  .blog-card{
+    width: 80%;
+    padding: 24px;
+  }
+  .blog-card .content h1 {
+    font-size: 1.3rem; 
+}
+.blog-card .content p {
+  font-size: 14px;
+}
+};
